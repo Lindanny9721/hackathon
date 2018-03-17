@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>ScriptEd Advanced Hackathon</title>
+    <link href="https://fonts.googleapis.com/css?family=Aldrich" rel="stylesheet">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,29 +18,54 @@
     <script src="js/event.js" defer></script> 
   </head>
   <body>
-       <div id="container">
-    <h1> Sailor Simulation</h1>
-    <p id="Intro"> <h2> (Responsibilities of sailor)</h2></p>
-    <input id="name" type="text" placeholder="Full Name"> <button id="enter"> Enter</button>
- </div>
-<h2 id="namedisplay"> </h2> 
-     <button id="start"> <h1 id="go"> START </h1> </button>
+        <div class="topnav">
+  <a class="active" href="#home"> <img  id="https://mail.google.com/mail/u/1/?ui=2&ik=726ef138ba&view=fimg&th=16235601a81682eb&attid=0.2&disp=emb&realattid=ii_jevr0t5i0_1623560116c577d2&attbid=ANGjdJ-t1w1VkrFSAryMXPNEdQ_npZ3xndWnCiw8PcjVAZYSgp-NKjrb8aTTOBa7WLb99zXLgegNi1Hbu9tOEyWyBGVW3WIRR_LENHAIITLZPfC3q9sgNkw0RVfPytA&sz=w944-h940&ats=1521316351153&rm=16235601a81682eb&zw&atsh=1"><h2 id="logo">SS</h2></a>
 
-        
+  <a href="#about">About</a>
+  <a href="#contact">How to play</a>
+  
+</div>
+    <progress id="health" value="100" max="100">morale</progress>
+
+    <div id="containertwo">
+      <div id="container">
+          <h1> Lets Sail!</h1>
+          <p id="Intro"> 
+            <h2>
+              During this simulation you will be experiencing what sailors go through everyday from cleaning the decks to encountering enemy ships. You will be first hand making your own decisions and living with the consequences which will affect your morale, the ships health, military power, and the supplies you have. Make smart decisions, your life is on the line.  TIME TO SAIL!!!!! 
+
+
+            </h2>
+          </p>
+          <input id="name" type="text" placeholder="Full Name"> 
+          <button id="enter"> Enter</button>
+      </div>
+      <h2 id="namedisplay"> </h2> 
+      <button id="start"> 
+        <h1 id="go"> 
+          Start 
+        </h1> 
+      </button>
+    </div>
     
     <div id="secondpart"> 
-    <div id = needs>
-      
+      <div id = needs>
+      </div>
     </div>
-    <div id = scenario>
-      <h2>
-        <!--Each machine on board a ship requires maintance which has to be carried out at regular intervals of time.-->
-      </h2>
-    </div>
-    <div id = decisions>
+   
+    <div id = "scenario">
+      <h3>
+        
+      </h3>
+       <div id = "decisions">
       <button id = choice1 type="button">Check</button>
       <button id = choice2 type="button">Ignore</button>
-    </div>>
     </div>
+  
+  </div>
+  <div id="stats">
+    
+  </div>
+  <img id = "engine" src = ""/>
   </body>
 </html>
