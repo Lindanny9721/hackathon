@@ -8,14 +8,14 @@ function newEventGen() {
                 $("h3").html(events[name].text);
                 $("#choice1").html(events[name].choices[0].text);
                 $("#choice2").html(events[name].choices[1].text);
-                $("#stats").val(Supplies +"  "+Morale +"  " +Militarypower+"  " + Conditions);
-                $("#stats").append()
+                $("#stats").html(Supplies + " SUPPLIES /" + Morale + " MORALE /" + Militarypower+" MILITARYPOWER /" + Conditions+" CONDITIONS ");
+                
 }
 
 
 
 function checkLose() {
-               if (Supplies == 0 || Morale == 0 || Conditions == 0 || Militarypower == 0) {
+               if (Supplies <= 0 || Morale <= 0 || Conditions <= 0 || Militarypower <= 0) {
                     alert("GameOver!");
                 } else {
                    newEventGen(); 
@@ -51,6 +51,7 @@ $(document).ready(function() {
                 newEventGen();
                 $("#scenario").show();
                 $("#engine").show();
+                getImageUrl();
             });
 
              $("#choice1").click(function() {
@@ -90,7 +91,11 @@ $(document).ready(function() {
 });
             function getImageUrl(){
                 APILink = "https://pixabay.com/api/?key=8399109-347a1179d345f8bfcade2d937&q=ship+engine&image_type=photo";
-                return $.get(APILink).then(res => res.hits[0].webformatURL);
+                $.get(APILink).then(res => {
+                    console.log(res.hits[0].webformatURL)
+                    $("body").css("background-image", "url(" + res.hits[0].webformatURL + ")");
+                });
+                
             }
             var events = {
                maintenance: {
@@ -189,8 +194,6 @@ $(document).ready(function() {
                     ]
                 }
             };
-            
-            getImageUrl().then(url => (events.maintenance.image = url))
 
             var Supplies = 100;
             var Morale = 100;
@@ -199,5 +202,6 @@ $(document).ready(function() {
             var Days = 0;
 
 Supplies + " " + Morale
-     
-    
+
+
+

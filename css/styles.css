@@ -15,6 +15,7 @@ position:center;
     width: 50%;
     border: 3px #000000;
     padding: 20px;
+    
 }
 
 
@@ -116,6 +117,12 @@ h3 {
 #scenario{
 background-color:black;
 position:center;
+text-align:center;
+position:center;
+margin: 290px;
+    width: 50%;
+    border: 3px #000000;
+    padding: 20px;
 }
 
 button{
@@ -127,3 +134,8 @@ button{
         box-shadow: 0px 0px 100px red;
     color: red;
        }
+       
+       
+#stats {
+    color: red;
+}
